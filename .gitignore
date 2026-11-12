@@ -1,0 +1,5 @@
+# Local cloned upstream repositories & heavy runtime envs
+repos/
+VoiceStudio/
+.python/
+.uv-cache/
