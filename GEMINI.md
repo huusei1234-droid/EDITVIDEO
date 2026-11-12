@@ -78,14 +78,15 @@ Tài liệu này lưu trữ **toàn bộ phong cách dựng phim (Editing DNA)**
 
 ## 3. Tích Hợp HyperFrames (`heygen-com/hyperframes`) – Làm Video Bằng HTML/GSAP/Shader
 - **Khái niệm**: HyperFrames là framework mã nguồn mở của HeyGen cho phép viết **HTML + CSS + GSAP / Lottie / Three.js / WebGL Shaders** và render thành video MP4 chuẩn từng khung hình (deterministic frame-by-frame capture qua Headless Chrome + FFmpeg).
-- **Bộ 9 Skills HyperFrames Đã Cài Đặt Sẵn**:
+- **Bộ 10 Skills HyperFrames Đã Cài Đặt Sẵn**:
   1. `hyperframes`: Quy tắc cốt lõi (Contract 12 điều, cấu trúc `index.html` + `compositions/`, `class="clip"`, `data-start`, `data-duration`, `window.__timelines`).
-  2. `hyperframes-cli`: Sử dụng CLI (`npx hyperframes init`, `preview`, `check --json`, `snapshot --review`, `render`).
-  3. `hyperframes-registry`: Kho ~450 blocks & components dựng sẵn (shader transitions, social overlays, kinetic typography, data charts, maps, 3D, camera moves).
-  4. `media-use`: Xử lý media, voiceover, music, SFX, cutout, color grading (`npx hyperframes media-treatment`).
-  5. `reverse-any-video`: Phân tích và dựng lại bất kỳ video mẫu nào thành project HyperFrames chỉnh sửa được.
-  6. `style-sampling`: 5 phong cách video chuẩn (Collage Explainer, Finance Explainer, Animated Science Explainer, 3D Brand Explainer, 3D True Crime).
-  7. `figma`, `slideshow`, `remotion-to-hyperframes`.
+  2. `tvc-qc-san-pham` (**"TVC QC sản phẩm"**): Bộ quy chuẩn đạo diễn & dựng TVC Quảng Cáo Sản Phẩm cao cấp trên HyperFrames (cấu trúc 6 hồi Beat-Grid `0.92s`, Diegetic UI/Typography, chữ 3D Gold Glitter `Bling!` quét sáng, chữ ký SVG Write-On, Portal Spin Transition & bố cục End-Card chuẩn nhãn hàng `UL`).
+  3. `hyperframes-cli`: Sử dụng CLI (`npx hyperframes init`, `preview`, `check --json`, `snapshot --review`, `render`).
+  4. `hyperframes-registry`: Kho ~450 blocks & components dựng sẵn (shader transitions, social overlays, kinetic typography, data charts, maps, 3D, camera moves).
+  5. `media-use`: Xử lý media, voiceover, music, SFX, cutout, color grading (`npx hyperframes media-treatment`).
+  6. `reverse-any-video`: Phân tích và dựng lại bất kỳ video mẫu nào thành project HyperFrames chỉnh sửa được.
+  7. `style-sampling`: 5 phong cách video chuẩn (Collage Explainer, Finance Explainer, Animated Science Explainer, 3D Brand Explainer, 3D True Crime).
+  8. `figma`, `slideshow`, `remotion-to-hyperframes`.
 - **Phối Hợp HyperFrames + CapCut Pro Editor**:
   - Dùng **HyperFrames** khi cần tạo các đoạn **Motion Graphics cao cấp, Kinetic Typography, Biểu đồ động (Data Charts), Bản đồ, Intro/Outro thương hiệu, hoặc Video Explainer tự động hóa bằng code**.
   - Dùng **CapCut Pro Editor** khi dựng **TVC thực tế, Vlog, Reels, AI Drama, cắt ghép đa tầng B-roll, Masking và trộn âm thanh phức tạp**.
