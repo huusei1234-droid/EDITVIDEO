@@ -1,0 +1,99 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .cap-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 1418px;
+      text-align: center;
+      overflow: visible;
+    }
+
+    .cap-clip-low {
+      top: 1618px;
+    }
+
+    .cap-pill {
+      display: inline-block;
+      max-width: 856px;
+      opacity: 0;
+      background-color: #2e061a;
+      border: 1.5px solid rgba(255, 224, 152, 0.72);
+      border-radius: 20px;
+      padding: 12px 26px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.26;
+      color: #ffffff;
+      box-shadow: 0 10px 26px rgba(24, 2, 12, 0.35);
+    }
+
+    .cap-hl {
+      color: #ffe394;
+      font-weight: 800;
+    }
+  </style>
+
+  <div id="root" data-composition-id="captions-track" data-width="1080" data-height="1920">
+    <div id="cap-01" class="clip cap-clip" data-start="0.24" data-duration="3.18" data-track-index="1" data-layout-allow-caption-zone>
+      <div id="cap-in-01" class="cap-pill">Qua tuổi 45, vì sao <span class="cap-hl">cảm giác khô</span> rõ hơn?</div>
+    </div>
+    <div id="cap-02a" class="clip cap-clip" data-start="3.72" data-duration="2.88" data-track-index="2" data-layout-allow-caption-zone>
+      <div id="cap-in-02a" class="cap-pill">Trước đây bình thường, gần đây lại <span class="cap-hl">khô &amp; kém dễ chịu</span></div>
+    </div>
+    <div id="cap-02b" class="clip cap-clip" data-start="6.62" data-duration="2.95" data-track-index="3" data-layout-allow-caption-zone>
+      <div id="cap-in-02b" class="cap-pill">dù thói quen sinh hoạt hằng ngày không đổi.</div>
+    </div>
+    <div id="cap-03" class="clip cap-clip" data-start="9.86" data-duration="3.6" data-track-index="4" data-layout-allow-caption-zone>
+      <div id="cap-in-03" class="cap-pill"><span class="cap-hl">Biến động hormone</span> làm lượng dịch tự nhiên giảm;</div>
+    </div>
+    <div id="cap-04a" class="clip cap-clip cap-clip-low" data-start="13.76" data-duration="2.45" data-track-index="1" data-layout-allow-caption-zone>
+      <div id="cap-in-04a" class="cap-pill">nên <span class="cap-hl">chăm sóc độ ẩm</span> thành nhu cầu riêng,</div>
+    </div>
+    <div id="cap-04b" class="clip cap-clip cap-clip-low" data-start="16.23" data-duration="2.5" data-track-index="2" data-layout-allow-caption-zone>
+      <div id="cap-in-04b" class="cap-pill">chứ chỉ chú ý làm sạch là chưa đủ.</div>
+    </div>
+    <div id="cap-05a" class="clip cap-clip" data-start="19.04" data-duration="3.75" data-track-index="3" data-layout-allow-caption-zone>
+      <div id="cap-in-05a" class="cap-pill"><span class="cap-hl">LT Plus hộp hồng Hằng Thu</span> duy trì độ ẩm &amp; pH,</div>
+    </div>
+    <div id="cap-05b" class="clip cap-clip" data-start="22.81" data-duration="3.72" data-track-index="4" data-layout-allow-caption-zone>
+      <div id="cap-in-05b" class="cap-pill">đồng thời làm sạch dịch nhầy, giảm mùi khó chịu.</div>
+    </div>
+    <div id="cap-06" class="clip cap-clip" data-start="26.84" data-duration="4.46" data-track-index="1" data-layout-allow-caption-zone>
+      <div id="cap-in-06" class="cap-pill">Đáp ứng cả nhu cầu <span class="cap-hl">làm sạch lẫn giữ ẩm</span> trong sản phẩm.</div>
+    </div>
+    <div id="cap-07" class="clip cap-clip" data-start="31.6" data-duration="4.46" data-track-index="2" data-layout-allow-caption-zone>
+      <div id="cap-in-07" class="cap-pill">Nếu khô kéo dài hoặc đau khi gần gũi, <span class="cap-hl">chị nên đi khám</span>.</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const groups = [
+      { sel: "#cap-in-01", st: 0.24, en: 3.4 },
+      { sel: "#cap-in-02a", st: 3.72, en: 6.58 },
+      { sel: "#cap-in-02b", st: 6.62, en: 9.55 },
+      { sel: "#cap-in-03", st: 9.86, en: 13.44 },
+      { sel: "#cap-in-04a", st: 13.76, en: 16.19 },
+      { sel: "#cap-in-04b", st: 16.23, en: 18.71 },
+      { sel: "#cap-in-05a", st: 19.04, en: 22.77 },
+      { sel: "#cap-in-05b", st: 22.81, en: 26.51 },
+      { sel: "#cap-in-06", st: 26.84, en: 31.28 },
+      { sel: "#cap-in-07", st: 31.6, en: 36.04 }
+    ];
+    groups.forEach((g) => {
+      tl.fromTo(g.sel, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.16, ease: "power2.out" }, g.st)
+        .to(g.sel, { opacity: 0, duration: 0.12, ease: "power2.in" }, g.en - 0.12)
+        .set(g.sel, { opacity: 0, visibility: "hidden" }, g.en);
+    });
+    window.__timelines["captions-track"] = tl;
+  </script>
+</template>

@@ -1,0 +1,339 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #420924;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .scene-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .cam-rig {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      transform-origin: 50% 55%;
+    }
+
+    .bg-photo {
+      width: 1080px;
+      height: 1920px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Authentic Cutout Box Hero Stage (Beat 5A) */
+    .hero-box-clip {
+      position: absolute;
+      left: 175px;
+      top: 635px;
+      width: 730px;
+      height: 590px;
+      z-index: 4;
+    }
+
+    .hero-box-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-box-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Top Brand Title Lockup */
+    .s5-header-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 196px;
+      z-index: 6;
+    }
+
+    .s5-header-card {
+      background-color: #540a2e;
+      background-image: linear-gradient(135deg, rgba(84, 10, 46, 0.96) 0%, rgba(136, 20, 74, 0.94) 100%);
+      border: 2px solid #ffe08d;
+      border-radius: 26px;
+      padding: 18px 26px 20px;
+      text-align: center;
+      box-shadow: 0 16px 38px rgba(48, 4, 24, 0.36);
+    }
+
+    .s5-kicker {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #ffe394;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .s5-brand-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      font-size: 46px;
+      line-height: 1.14;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+
+    /* Benefit Chips */
+    .s5-chip-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      z-index: 6;
+    }
+
+    .s5-chip {
+      background: rgba(255, 250, 252, 0.96);
+      border: 2px solid rgba(212, 146, 56, 0.72);
+      border-radius: 999px;
+      padding: 14px 28px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      color: #5b0d32;
+      box-shadow: 0 12px 28px rgba(58, 8, 30, 0.25);
+    }
+
+    /* Beat 5B Dual Authentic Studio Product Cards (PROD_02 & PROD_03) */
+    .s5b-card-left-clip {
+      position: absolute;
+      left: 112px;
+      top: 575px;
+      width: 412px;
+      height: 590px;
+      z-index: 5;
+    }
+
+    .s5b-card-right-clip {
+      position: absolute;
+      right: 112px;
+      top: 635px;
+      width: 412px;
+      height: 590px;
+      z-index: 5;
+    }
+
+    .s5b-frame {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 3px solid #ffe08d;
+      background: #ffffff;
+      box-shadow: 0 22px 48px rgba(48, 6, 26, 0.38);
+    }
+
+    .s5b-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Legal Disclaimer inside Safe Band */
+    .s5-legal-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 1254px;
+      z-index: 6;
+    }
+
+    .s5-legal-pill {
+      background: rgba(58, 8, 32, 0.88);
+      border-radius: 999px;
+      padding: 10px 24px;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: #fff3f8;
+    }
+
+    .sparkle-clip {
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      z-index: 6;
+      pointer-events: none;
+    }
+  </style>
+
+  <div id="root" data-composition-id="act3-hero-demo" data-width="1080" data-height="1920">
+    <!-- Pink Silk & Dewdrop Luxury Stage Background across full 7.80s -->
+    <div id="s5-bg-clip" class="clip scene-clip" data-start="0" data-duration="7.8" data-track-index="1">
+      <div id="s5-bg-cam" class="cam-rig" data-layout-allow-overflow>
+        <img class="bg-photo" src="assets/images/BG_03_San_Khau_Bling_Lua_Hong_Suong_Am.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Header Lockup -->
+    <div id="s5-header-clip" class="clip s5-header-clip" data-start="0.12" data-duration="7.58" data-track-index="2">
+      <div id="s5-header-card" class="s5-header-card">
+        <div class="s5-kicker">VIÊN ĐẶT PHỤ KHOA HỘP HỒNG</div>
+        <div class="s5-brand-title" data-var-text="product_name">LT PLUS HẰNG THU</div>
+      </div>
+    </div>
+
+    <!-- Benefit Chip 1 -->
+    <div id="s5-chip1-clip" class="clip s5-chip-clip" style="top: 368px" data-start="0.65" data-duration="7.02" data-track-index="3">
+      <div id="s5-chip1" class="s5-chip">Hỗ trợ duy trì độ ẩm &amp; pH tự nhiên</div>
+    </div>
+
+    <!-- Benefit Chip 2 -->
+    <div id="s5-chip2-clip" class="clip s5-chip-clip" style="top: 458px" data-start="3.45" data-duration="4.22" data-track-index="3">
+      <div id="s5-chip2" class="s5-chip">Làm sạch dịch nhầy · Giảm mùi khó chịu</div>
+    </div>
+
+    <!-- Beat 5A (0.00s - 4.35s): Authentic Cutout Box Hero Showcase -->
+    <div id="s5a-box-clip" class="clip hero-box-clip" data-start="0.08" data-duration="4.28" data-track-index="4" data-layout-ignore>
+      <div id="s5a-box-wrap" class="hero-box-wrap">
+        <img class="hero-box-img" data-var-src="packshot_src" src="assets/images/PROD_01_LT_Plus_Box_Cutout.png" alt="" />
+      </div>
+    </div>
+
+    <div id="s5-sp1-clip" class="clip sparkle-clip" style="left: 162px; top: 650px" data-start="0.35" data-duration="3.8" data-track-index="5" data-layout-ignore>
+      <div id="s5-sp1">
+        <svg viewBox="0 0 64 64" width="58" height="58">
+          <path d="M32 2 L37 27 L62 32 L37 37 L32 62 L27 37 L2 32 L27 27 Z" fill="#FFF7D6" />
+        </svg>
+      </div>
+    </div>
+
+    <div id="s5-sp2-clip" class="clip sparkle-clip" style="left: 850px; top: 1090px" data-start="0.6" data-duration="3.5" data-track-index="5" data-layout-ignore>
+      <div id="s5-sp2">
+        <svg viewBox="0 0 64 64" width="52" height="52">
+          <path d="M32 2 L37 27 L62 32 L37 37 L32 62 L27 37 L2 32 L27 27 Z" fill="#FFE394" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Beat 5B (4.35s - 7.72s): Authentic Open Box (PROD_02) + Bottle & Tablets (PROD_03) -->
+    <div id="s5b-left-clip" class="clip s5b-card-left-clip" data-start="4.35" data-duration="3.35" data-track-index="4" data-layout-ignore>
+      <div id="s5b-left-frame" class="s5b-frame">
+        <img class="s5b-img" src="assets/images/PROD_02_LT_Plus_Hop_Mo_Khay_Lo_Ref.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="s5b-right-clip" class="clip s5b-card-right-clip" data-start="4.58" data-duration="3.12" data-track-index="4" data-layout-ignore>
+      <div id="s5b-right-frame" class="s5b-frame">
+        <img class="s5b-img" src="assets/images/PROD_03_LT_Plus_Hop_Lo_Vien_Dat_Ref.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Regulatory Super -->
+    <div id="s5-legal-clip" class="clip s5-legal-clip" data-start="0.4" data-duration="7.3" data-track-index="6">
+      <div id="s5-legal-pill" class="s5-legal-pill" data-var-text="legal_text">
+        *Sản phẩm hỗ trợ chăm sóc vùng kín, không phải là thuốc
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#s5-bg-cam",
+      { scale: 1.02, y: 0 },
+      { scale: 1.1, y: -22, duration: 7.78, ease: "sine.inOut" },
+      0
+    );
+
+    tl.fromTo(
+      "#s5-header-card",
+      { opacity: 0, y: -20, scale: 0.94 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "power3.out" },
+      0.12
+    ).to(
+      "#s5-header-card",
+      { opacity: 0, y: -12, duration: 0.22, ease: "power2.in" },
+      7.42
+    );
+
+    tl.fromTo(
+      "#s5-chip1",
+      { opacity: 0, x: -34, scale: 0.94 },
+      { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(1.4)" },
+      0.65
+    ).to("#s5-chip1", { opacity: 0, duration: 0.2, ease: "power2.in" }, 7.42);
+
+    tl.fromTo(
+      "#s5-chip2",
+      { opacity: 0, x: 34, scale: 0.94 },
+      { opacity: 1, x: 0, scale: 1, duration: 0.3, ease: "back.out(1.4)" },
+      3.45
+    ).to("#s5-chip2", { opacity: 0, duration: 0.2, ease: "power2.in" }, 7.42);
+
+    // Beat 5A Authentic Hero Box levitation
+    tl.fromTo(
+      "#s5a-box-wrap",
+      { opacity: 0, scale: 0.86, y: 36, rotation: -3 },
+      { opacity: 1, scale: 1, y: 0, rotation: 0, duration: 0.46, ease: "back.out(1.35)" },
+      0.08
+    )
+      .to("#s5a-box-wrap", { y: -14, scale: 1.03, duration: 3.4, ease: "sine.inOut" }, 0.54)
+      .to("#s5a-box-wrap", { opacity: 0, scale: 0.94, duration: 0.28, ease: "power2.in" }, 4.04);
+
+    tl.fromTo(
+      "#s5-sp1",
+      { scale: 0, rotation: 0 },
+      { scale: 1.2, rotation: 45, duration: 0.42, ease: "back.out(1.8)" },
+      0.35
+    )
+      .to("#s5-sp1", { scale: 0.65, rotation: 80, duration: 0.9, ease: "sine.inOut" }, 0.77)
+      .to("#s5-sp1", { scale: 1.15, rotation: 115, duration: 0.9, ease: "sine.inOut" }, 1.67)
+      .to("#s5-sp1", { scale: 0, duration: 0.35, ease: "power2.in" }, 3.7);
+
+    tl.fromTo(
+      "#s5-sp2",
+      { scale: 0, rotation: -20 },
+      { scale: 1.15, rotation: 30, duration: 0.42, ease: "back.out(1.8)" },
+      0.6
+    )
+      .to("#s5-sp2", { scale: 0.6, rotation: 70, duration: 0.9, ease: "sine.inOut" }, 1.02)
+      .to("#s5-sp2", { scale: 1.1, rotation: 105, duration: 0.9, ease: "sine.inOut" }, 1.92)
+      .to("#s5-sp2", { scale: 0, duration: 0.35, ease: "power2.in" }, 3.7);
+
+    // Beat 5B Staggered Authentic Open Box & Bottle Cards
+    tl.fromTo(
+      "#s5b-left-frame",
+      { opacity: 0, x: -46, y: 20, rotation: -3 },
+      { opacity: 1, x: 0, y: 0, rotation: -2, duration: 0.38, ease: "back.out(1.3)" },
+      4.35
+    ).to("#s5b-left-frame", { opacity: 0, y: -14, duration: 0.22, ease: "power2.in" }, 7.44);
+
+    tl.fromTo(
+      "#s5b-right-frame",
+      { opacity: 0, x: 46, y: 24, rotation: 3 },
+      { opacity: 1, x: 0, y: 0, rotation: 2, duration: 0.38, ease: "back.out(1.3)" },
+      4.58
+    ).to("#s5b-right-frame", { opacity: 0, y: -14, duration: 0.22, ease: "power2.in" }, 7.44);
+
+    tl.fromTo(
+      "#s5-legal-pill",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.28, ease: "power2.out" },
+      0.4
+    ).to("#s5-legal-pill", { opacity: 0, duration: 0.22, ease: "power2.in" }, 7.44);
+
+    window.__timelines["act3-hero-demo"] = tl;
+  </script>
+</template>

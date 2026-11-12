@@ -1,0 +1,283 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #240815;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .scene-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .cam-rig {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      transform-origin: 50% 38%;
+    }
+
+    .bg-photo {
+      width: 1080px;
+      height: 1920px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Scene 3 Dewdrop Sparkles */
+    .bling-star-clip {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .bling-star-inner {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Scene 3 Medical Hormone Card */
+    .s3-card-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 985px;
+      z-index: 5;
+    }
+
+    .s3-card {
+      background-color: #4e0c2c;
+      background-image: linear-gradient(135deg, rgba(78, 12, 44, 0.96) 0%, rgba(124, 20, 68, 0.94) 100%);
+      border: 2px solid rgba(255, 224, 152, 0.76);
+      border-radius: 26px;
+      padding: 20px 28px 24px;
+      box-shadow: 0 18px 40px rgba(42, 6, 24, 0.34);
+      text-align: center;
+    }
+
+    .s3-eyebrow {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #ffe394;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .s3-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.18;
+      color: #ffffff;
+    }
+
+    /* Scene 4 Diegetic 3D Prism Kinetic Comparison */
+    .s4-prism-clip {
+      position: absolute;
+      left: 118px;
+      right: 118px;
+      top: 860px;
+      height: 164px;
+      z-index: 6;
+      perspective: 1100px;
+    }
+
+    .s4-prism-body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+
+    .s4-prism-face {
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 26px;
+      backface-visibility: hidden;
+      box-shadow: 0 16px 36px rgba(48, 10, 28, 0.28);
+      text-align: center;
+    }
+
+    .s4-face-front {
+      background: rgba(255, 250, 252, 0.96);
+      border: 2px solid rgba(164, 130, 146, 0.65);
+    }
+
+    .s4-face-back {
+      background-color: #6e0f3d;
+      background-image: linear-gradient(135deg, #6e0f3d 0%, #a81c5e 100%);
+      border: 2.5px solid #ffe08d;
+      transform: rotateX(180deg);
+    }
+
+    .s4-front-kicker {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #7c244b;
+      text-transform: uppercase;
+    }
+
+    .s4-front-main {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: #460d27;
+      margin-top: 4px;
+    }
+
+    .s4-back-kicker {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #ffe394;
+      text-transform: uppercase;
+    }
+
+    .s4-back-main {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 40px;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+  </style>
+
+  <div id="root" data-composition-id="act2-insight" data-width="1080" data-height="1920">
+    <!-- Scene 3: local 0.00s - 3.90s (abs 9.75s - 13.65s) -->
+    <div id="s3-clip" class="clip scene-clip" data-start="0" data-duration="3.9" data-track-index="1">
+      <div id="s3-cam" class="cam-rig" data-layout-allow-overflow>
+        <img class="bg-photo" src="assets/images/SCENE_03_11s-17s_Bien_Dong_Hormone.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="s3-star1-clip" class="clip bling-star-clip" style="left: 158px; top: 470px" data-start="0.2" data-duration="3.5" data-track-index="2" data-layout-ignore>
+      <div id="s3-star1" class="bling-star-inner">
+        <svg viewBox="0 0 64 64" width="54" height="54">
+          <path d="M32 2 L37 27 L62 32 L37 37 L32 62 L27 37 L2 32 L27 27 Z" fill="#FFF7D8" />
+        </svg>
+      </div>
+    </div>
+
+    <div id="s3-star2-clip" class="clip bling-star-clip" style="left: 398px; top: 690px" data-start="0.45" data-duration="3.2" data-track-index="2" data-layout-ignore>
+      <div id="s3-star2" class="bling-star-inner">
+        <svg viewBox="0 0 64 64" width="46" height="46">
+          <path d="M32 2 L37 27 L62 32 L37 37 L32 62 L27 37 L2 32 L27 27 Z" fill="#FFE394" />
+        </svg>
+      </div>
+    </div>
+
+    <div id="s3-card-clip" class="clip s3-card-clip" data-start="0.14" data-duration="3.7" data-track-index="3">
+      <div id="s3-card" class="s3-card">
+        <div class="s3-eyebrow">QUANH MÃN KINH · HORMONE ĐỔI</div>
+        <div class="s3-title">Lượng dịch tự nhiên suy giảm</div>
+      </div>
+    </div>
+
+    <!-- Scene 4: local 3.90s - 9.15s (abs 13.65s - 18.90s) -->
+    <div id="s4-clip" class="clip scene-clip" data-start="3.9" data-duration="5.25" data-track-index="1">
+      <div id="s4-cam" class="cam-rig" data-layout-allow-overflow>
+        <img class="bg-photo" src="assets/images/SCENE_04_17s-23s_Lam_Sach_Va_Giu_Am.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="s4-prism-clip" class="clip s4-prism-clip" data-start="4.06" data-duration="4.98" data-track-index="3">
+      <div id="s4-prism-body" class="s4-prism-body">
+        <div class="s4-prism-face s4-face-front" data-layout-allow-overlap>
+          <div class="s4-front-kicker">QUAN NIỆM CŨ</div>
+          <div class="s4-front-main">Chỉ chú ý làm sạch: CHƯA ĐỦ</div>
+        </div>
+        <div class="s4-prism-face s4-face-back" data-layout-allow-overlap>
+          <div class="s4-back-kicker">NHU CẦU RIÊNG TUỔI 45+</div>
+          <div class="s4-back-main">Chăm sóc độ ẩm chuyên biệt</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // Scene 3 camera & crystal sparkles
+    tl.fromTo(
+      "#s3-cam",
+      { scale: 1.02, y: 0 },
+      { scale: 1.08, y: -14, duration: 3.88, ease: "sine.inOut" },
+      0
+    );
+
+    tl.fromTo(
+      "#s3-star1",
+      { scale: 0, rotation: 0 },
+      { scale: 1.18, rotation: 35, duration: 0.45, ease: "back.out(1.8)" },
+      0.22
+    )
+      .to("#s3-star1", { scale: 0.65, rotation: 65, duration: 0.7, ease: "sine.inOut" }, 0.67)
+      .to("#s3-star1", { scale: 1.12, rotation: 95, duration: 0.7, ease: "sine.inOut" }, 1.37)
+      .to("#s3-star1", { scale: 0, rotation: 130, duration: 0.5, ease: "power2.in" }, 3.1);
+
+    tl.fromTo(
+      "#s3-star2",
+      { scale: 0, rotation: -15 },
+      { scale: 1.1, rotation: 25, duration: 0.45, ease: "back.out(1.8)" },
+      0.52
+    )
+      .to("#s3-star2", { scale: 0.55, rotation: 55, duration: 0.75, ease: "sine.inOut" }, 0.97)
+      .to("#s3-star2", { scale: 1.05, rotation: 85, duration: 0.75, ease: "sine.inOut" }, 1.72)
+      .to("#s3-star2", { scale: 0, rotation: 115, duration: 0.45, ease: "power2.in" }, 3.15);
+
+    tl.fromTo(
+      "#s3-card",
+      { opacity: 0, y: 22, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "power3.out" },
+      0.14
+    ).to(
+      "#s3-card",
+      { opacity: 0, y: -12, duration: 0.22, ease: "power2.in" },
+      3.58
+    );
+
+    // Scene 4 camera + 3D Prism Flip at local 6.05s (abs 15.80s)
+    tl.fromTo(
+      "#s4-cam",
+      { scale: 1.01, y: 0 },
+      { scale: 1.05, y: -8, duration: 2.15, ease: "sine.inOut" },
+      3.9
+    )
+      .to("#s4-cam", { scale: 1.1, y: -18, duration: 0.42, ease: "power3.out" }, 6.05)
+      .to("#s4-cam", { scale: 1.13, y: -24, duration: 2.65, ease: "sine.out" }, 6.47);
+
+    tl.fromTo(
+      "#s4-prism-body",
+      { opacity: 0, y: 20, rotateX: 0 },
+      { opacity: 1, y: 0, rotateX: 0, duration: 0.32, ease: "power3.out" },
+      4.06
+    )
+      .to(
+        "#s4-prism-body",
+        { rotateX: -180, duration: 0.54, ease: "back.out(1.35)" },
+        6.08
+      )
+      .to(
+        "#s4-prism-body",
+        { opacity: 0, duration: 0.24, ease: "power2.in" },
+        8.76
+      );
+
+    window.__timelines["act2-insight"] = tl;
+  </script>
+</template>

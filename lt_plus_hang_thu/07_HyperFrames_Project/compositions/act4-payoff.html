@@ -1,0 +1,122 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #2b0818;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .scene-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .cam-rig {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      transform-origin: 50% 34%;
+    }
+
+    .bg-photo {
+      width: 1080px;
+      height: 1920px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Authentic crisp box overlay over held box so text is 100% genuine */
+    .held-authentic-box {
+      position: absolute;
+      left: 518px;
+      top: 834px;
+      width: 262px;
+      height: 210px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .s6-dual-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 1085px;
+      z-index: 5;
+    }
+
+    .s6-dual-card {
+      background-color: #540c2e;
+      background-image: linear-gradient(135deg, rgba(84, 12, 46, 0.96) 0%, rgba(134, 22, 74, 0.94) 100%);
+      border: 2.5px solid #ffe08d;
+      border-radius: 28px;
+      padding: 20px 28px 24px;
+      box-shadow: 0 20px 44px rgba(46, 6, 24, 0.36);
+      text-align: center;
+    }
+
+    .s6-eyebrow {
+      display: inline-block;
+      padding: 5px 18px;
+      border-radius: 999px;
+      background: #ffe394;
+      color: #590c31;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .s6-main {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+  </style>
+
+  <div id="root" data-composition-id="act4-payoff" data-width="1080" data-height="1920">
+    <div id="s6-clip" class="clip scene-clip" data-start="0" data-duration="4.75" data-track-index="1">
+      <div id="s6-cam" class="cam-rig" data-layout-allow-overflow>
+        <img class="bg-photo" src="assets/images/SCENE_06_32s-38s_Dap_Ung_Kep_Rang_Ro.jpg" alt="" />
+        <img class="held-authentic-box" src="assets/images/PROD_01_LT_Plus_Box_Cutout.png" alt="" data-layout-ignore />
+      </div>
+    </div>
+
+    <div id="s6-dual-clip" class="clip s6-dual-clip" data-start="0.16" data-duration="4.5" data-track-index="2">
+      <div id="s6-dual-card" class="s6-dual-card">
+        <div class="s6-eyebrow">TÁC ĐỘNG KÉP 2 TRONG 1</div>
+        <div class="s6-main">Đáp ứng cả LÀM SẠCH &amp; GIỮ ẨM</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#s6-cam",
+      { scale: 1.02, y: 0 },
+      { scale: 1.09, y: -16, duration: 4.72, ease: "sine.inOut" },
+      0
+    );
+
+    tl.fromTo(
+      "#s6-dual-card",
+      { opacity: 0, y: 24, scale: 0.94 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(1.3)" },
+      0.16
+    ).to(
+      "#s6-dual-card",
+      { opacity: 0, y: -12, duration: 0.24, ease: "power2.in" },
+      4.38
+    );
+
+    window.__timelines["act4-payoff"] = tl;
+  </script>
+</template>

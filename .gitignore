@@ -3,3 +3,6 @@ repos/
 VoiceStudio/
 .python/
 .uv-cache/
+.node22/
+lt_plus_hang_thu/07_HyperFrames_Project/.hyperframes/
+lt_plus_hang_thu/07_HyperFrames_Project/renders/

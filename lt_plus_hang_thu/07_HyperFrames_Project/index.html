@@ -1,0 +1,78 @@
+<!doctype html>
+<html
+  lang="vi"
+  data-composition-variables='[
+    {"id":"brand_name","type":"string","label":"Thương hiệu","default":"HẰNG THU"},
+    {"id":"product_name","type":"string","label":"Tên sản phẩm","default":"LT PLUS HẰNG THU"},
+    {"id":"hook_eyebrow","type":"string","label":"Nhãn mở đầu","default":"QUA TUỔI 45+"},
+    {"id":"endorser_role","type":"string","label":"Dòng bảo chứng","default":"Hộp hồng chính hãng"},
+    {"id":"cta_keyword","type":"string","label":"Từ khóa CTA","default":"Nhắn “LT PLUS”"},
+    {"id":"cta_subtext","type":"string","label":"Mô tả CTA","default":"Tư vấn độ ẩm riêng cho chị"},
+    {"id":"legal_text","type":"string","label":"Khuyến cáo","default":"*Sản phẩm hỗ trợ chăm sóc vùng kín, không phải là thuốc"},
+    {"id":"packshot_src","type":"string","label":"Ảnh hộp sản phẩm","default":"assets/images/PROD_01_LT_Plus_Box_Cutout.png"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>LT Plus Hộp Hồng Hằng Thu — TVC Video Mẫu (9:16)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:wght@700;800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --brand-primary: #b81d65; --brand-deep: #4e0a2b; --brand-gold: #ffe08d; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #240815; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .scene-host { position: absolute; inset: 0; z-index: 2; }
+      .captions-host { position: absolute; inset: 0; z-index: 12; pointer-events: none; }
+      .transitions-host { position: absolute; inset: 0; z-index: 18; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="41.2" data-width="1080" data-height="1920" data-fps="30">
+      <!-- 6-Act Commercial Visual Compositions -->
+      <div id="act1-hook" class="scene-host" data-composition-id="act1-hook" data-composition-src="compositions/act1-hook.html" data-start="0" data-duration="9.75" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="act2-insight" class="scene-host" data-composition-id="act2-insight" data-composition-src="compositions/act2-insight.html" data-start="9.75" data-duration="9.15" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="act3-hero-demo" class="scene-host" data-composition-id="act3-hero-demo" data-composition-src="compositions/act3-hero-demo.html" data-start="18.9" data-duration="7.8" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="act4-payoff" class="scene-host" data-composition-id="act4-payoff" data-composition-src="compositions/act4-payoff.html" data-start="26.7" data-duration="4.75" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="act5-care" class="scene-host" data-composition-id="act5-care" data-composition-src="compositions/act5-care.html" data-start="31.45" data-duration="4.75" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="act6-endcard" class="scene-host" data-composition-id="act6-endcard" data-composition-src="compositions/act6-endcard.html" data-start="36.2" data-duration="5" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+
+      <!-- Captions & Causal Transitions Hosts -->
+      <div id="captions-track" class="captions-host" data-composition-id="captions-track" data-composition-src="compositions/captions-track.html" data-start="0" data-duration="36.2" data-track-index="3" data-track-kind="captions" data-width="1080" data-height="1920"></div>
+      <div id="tvc-transitions" class="transitions-host" data-composition-id="tvc-transitions" data-composition-src="compositions/tvc-transitions.html" data-start="0" data-duration="41.2" data-track-index="4" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+
+      <!-- Checkerboard Voiceover Track (Micro-Fades on every cut) -->
+      <audio id="vo-01" class="clip" src="assets/audio/vo_01.wav" data-start="0.25" data-duration="3.15" data-track-index="5" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-02" class="clip" src="assets/audio/vo_02.wav" data-start="3.72" data-duration="5.83" data-track-index="6" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-03" class="clip" src="assets/audio/vo_03.wav" data-start="9.87" data-duration="3.58" data-track-index="5" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-04" class="clip" src="assets/audio/vo_04.wav" data-start="13.77" data-duration="4.96" data-track-index="6" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-05" class="clip" src="assets/audio/vo_05.wav" data-start="19.04" data-duration="7.48" data-track-index="5" data-volume="1.28" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-06" class="clip" src="assets/audio/vo_06.wav" data-start="26.85" data-duration="4.45" data-track-index="6" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-07" class="clip" src="assets/audio/vo_07.wav" data-start="31.61" data-duration="4.43" data-track-index="5" data-volume="1.25" data-fade-in="0.04" data-fade-out="0.06"></audio>
+      <audio id="vo-08" class="clip" src="assets/audio/vo_08.wav" data-start="36.37" data-duration="3.64" data-track-index="6" data-volume="1.28" data-fade-in="0.04" data-fade-out="0.06"></audio>
+
+      <!-- 2-Stage Commercial Music Bed -->
+      <audio id="bgm-part1" class="clip" src="assets/audio/bgm_gentle_spa.mp3" data-start="0" data-duration="19.1" data-track-index="7" data-volume="0.17" data-fade-in="0.4" data-fade-out="0.6"></audio>
+      <audio id="bgm-part2" class="clip" src="assets/audio/bgm_fresh_bling.mp3" data-start="18.7" data-duration="22.5" data-media-start="2.0" data-track-index="8" data-volume="0.19" data-fade-in="0.5" data-fade-out="0.9"></audio>
+
+      <!-- Synced Commercial Action SFX -->
+      <audio id="sfx-hook-open" class="clip" src="assets/audio/sfx_woosh_short.mp3" data-start="0.04" data-duration="0.5" data-track-index="9" data-volume="0.32"></audio>
+      <audio id="sfx-pip-pop" class="clip" src="assets/audio/sfx_pop_badge.mp3" data-start="6.66" data-duration="0.16" data-track-index="10" data-volume="0.35"></audio>
+      <audio id="sfx-flare-13" class="clip" src="assets/audio/sfx_woosh_card.mp3" data-start="13.62" data-duration="0.62" data-track-index="9" data-volume="0.32"></audio>
+      <audio id="sfx-prism-flip" class="clip" src="assets/audio/sfx_pop_badge.mp3" data-start="15.86" data-duration="0.16" data-track-index="10" data-volume="0.36"></audio>
+      <audio id="sfx-portal-reveal" class="clip" src="assets/audio/sfx_magic_reveal.mp3" data-start="18.88" data-duration="2.0" data-track-index="11" data-volume="0.42"></audio>
+      <audio id="sfx-payoff-woosh" class="clip" src="assets/audio/sfx_deep_woosh.mp3" data-start="26.68" data-duration="1.8" data-track-index="9" data-volume="0.3"></audio>
+      <audio id="sfx-endcard-bling" class="clip" src="assets/audio/sfx_magic_reveal.mp3" data-start="36.24" data-duration="2.0" data-track-index="11" data-volume="0.44"></audio>
+      <audio id="sfx-cta-notify" class="clip" src="assets/audio/sfx_notify_bling.mp3" data-start="36.62" data-duration="0.48" data-track-index="10" data-volume="0.38"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

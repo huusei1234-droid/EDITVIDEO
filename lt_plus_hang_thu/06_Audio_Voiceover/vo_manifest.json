@@ -1,0 +1,71 @@
+{
+  "sample_rate": 24000,
+  "total_duration_s": 40.322,
+  "segments": [
+    {
+      "id": "vo_01",
+      "text": "Qua tuổi 45, vì sao cảm giác khô lại rõ hơn?",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_01.wav",
+      "start_s": 0.25,
+      "duration_s": 3.152,
+      "end_s": 3.402
+    },
+    {
+      "id": "vo_02",
+      "text": "Trước đây thấy bình thường, gần đây vùng kín lại khô và kém dễ chịu dù thói quen sinh hoạt không đổi.",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_02.wav",
+      "start_s": 3.722,
+      "duration_s": 5.828,
+      "end_s": 9.55
+    },
+    {
+      "id": "vo_03",
+      "text": "Biến động hormone quanh mãn kinh có thể làm lượng dịch tự nhiên giảm;",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_03.wav",
+      "start_s": 9.87,
+      "duration_s": 3.576,
+      "end_s": 13.446
+    },
+    {
+      "id": "vo_04",
+      "text": "bởi vậy, chăm sóc độ ẩm trở thành nhu cầu riêng, chứ chỉ chú ý làm sạch là chưa đủ.",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_04.wav",
+      "start_s": 13.766,
+      "duration_s": 4.958,
+      "end_s": 18.724
+    },
+    {
+      "id": "vo_05",
+      "text": "LT Plus hộp hồng Hằng Thu có lợi ích hỗ trợ duy trì độ ẩm và pH tự nhiên, đồng thời làm sạch dịch nhầy, giảm mùi khó chịu.",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_05.wav",
+      "start_s": 19.044,
+      "duration_s": 7.483,
+      "end_s": 26.527
+    },
+    {
+      "id": "vo_06",
+      "text": "Điểm đáng cân nhắc là đáp ứng cả nhu cầu làm sạch lẫn giữ ẩm trong sản phẩm.",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_06.wav",
+      "start_s": 26.847,
+      "duration_s": 4.445,
+      "end_s": 31.292
+    },
+    {
+      "id": "vo_07",
+      "text": "Nếu khô kéo dài hoặc đau khi gần gũi, chị nên khám để chọn chăm sóc phù hợp.",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_07.wav",
+      "start_s": 31.612,
+      "duration_s": 4.433,
+      "end_s": 36.045
+    },
+    {
+      "id": "vo_08",
+      "text": "Nhắn LT Plus để được tư vấn nhu cầu hỗ trợ độ ẩm của chị nhé!",
+      "path": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\vo_08.wav",
+      "start_s": 36.365,
+      "duration_s": 3.637,
+      "end_s": 40.002
+    }
+  ],
+  "full_wav": "d:\\antigraviti\\lt_plus_hang_thu\\06_Audio_Voiceover\\LT_PLUS_FULL_VOICEOVER.wav"
+}

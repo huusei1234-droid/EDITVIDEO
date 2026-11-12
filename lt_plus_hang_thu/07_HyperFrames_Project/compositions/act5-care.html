@@ -1,0 +1,106 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #280917;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .scene-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .cam-rig {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      transform-origin: 50% 36%;
+    }
+
+    .bg-photo {
+      width: 1080px;
+      height: 1920px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .s7-banner-clip {
+      position: absolute;
+      left: 112px;
+      right: 112px;
+      top: 196px;
+      z-index: 5;
+    }
+
+    .s7-banner-card {
+      background: rgba(78, 12, 44, 0.94);
+      border: 2px solid rgba(255, 224, 150, 0.78);
+      border-radius: 26px;
+      padding: 18px 28px 22px;
+      box-shadow: 0 16px 38px rgba(42, 6, 24, 0.3);
+      text-align: center;
+    }
+
+    .s7-kicker {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #ffe394;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .s7-main {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+  </style>
+
+  <div id="root" data-composition-id="act5-care" data-width="1080" data-height="1920">
+    <div id="s7-clip" class="clip scene-clip" data-start="0" data-duration="4.75" data-track-index="1">
+      <div id="s7-cam" class="cam-rig" data-layout-allow-overflow>
+        <img class="bg-photo" src="assets/images/SCENE_07_38s-43s_Loi_Khuyen_Tham_Kham.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="s7-banner-clip" class="clip s7-banner-clip" data-start="0.14" data-duration="4.5" data-track-index="2">
+      <div id="s7-banner-card" class="s7-banner-card">
+        <div class="s7-kicker">LỜI KHUYÊN CHĂM SÓC Y KHOA</div>
+        <div class="s7-main">Khô kéo dài hoặc đau → Chị nên đi khám</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      "#s7-cam",
+      { scale: 1.01, y: 0 },
+      { scale: 1.07, y: -12, duration: 4.72, ease: "sine.inOut" },
+      0
+    );
+
+    tl.fromTo(
+      "#s7-banner-card",
+      { opacity: 0, y: -18, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "power3.out" },
+      0.14
+    ).to(
+      "#s7-banner-card",
+      { opacity: 0, y: -10, duration: 0.24, ease: "power2.in" },
+      4.38
+    );
+
+    window.__timelines["act5-care"] = tl;
+  </script>
+</template>
